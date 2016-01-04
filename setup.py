@@ -15,9 +15,9 @@ setup(
     url='https://github.com/ExactTarget/FuelSDK-Python',
     license='MIT',
     install_requires=[
-        'pyjwt==0.1.9',
-        'requests==2.2.1',
-        'suds-jurko==0.6',
+        'pyjwt',
+        'requests',
+        'suds-jurko',
     ],
     classifiers=[
         'Development Status :: 5 - Production/Stable',

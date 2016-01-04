@@ -3,14 +3,14 @@ import ET_Client
 try:
     debug = True
     stubObj = ET_Client.ET_Client(False, debug)
-    
+
     NameOfAttribute = "PythonSDKEmail"
 
-    # Create Profile Attribute 
+    # Create Profile Attribute
     print('>>> Create Profile Attribute')
     postAttribute = ET_Client.ET_ProfileAttribute()
     postAttribute.auth_stub = stubObj
-    postAttribute.props = {"Name" : NameOfAttribute, "PropertyType" : "string"}
+    postAttribute.props = {"Name": NameOfAttribute, "PropertyType": "string"}
     postResponse = postAttribute.post()
     print('Post Status: ' + str(postResponse.status))
     print('Code: ' + str(postResponse.code))
