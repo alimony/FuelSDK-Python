@@ -1,5 +1,8 @@
-import ET_Client
+from __future__ import print_function
+
 import uuid
+
+import ET_Client
 
 try:
     debug = False
