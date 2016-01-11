@@ -64,7 +64,7 @@ class ET_Constructor(object):
 
     def parse_props_dict_into_ws_object(self, obj_type, ws_object, props_dict):
         for k, v in props_dict.items():
-            if v is not None and k in ws_object:
+            if k in ws_object:
                 ws_object[k] = v
             else:
                 message = k + ' is not a property of ' + obj_type
