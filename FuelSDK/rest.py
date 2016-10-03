@@ -310,8 +310,8 @@ class ET_PostRest(ET_Constructor):
     def __init__(self, auth_stub, endpoint, payload):
         auth_stub.refresh_token()
 
-        headers = {'content-type': 'application/json'}
-        r = requests.post(endpoint + '?access_token=' + auth_stub.authToken, data=json.dumps(payload), headers=headers)
+        headers = {'content-type' : 'application/json', 'user-agent' : 'FuelSDK-Python'}
+        r = requests.post(endpoint + '?access_token=' + auth_stub.authToken , data=json.dumps(payload), headers=headers)
 
         obj = super(ET_PostRest, self).__init__(r, True)
         return obj
@@ -322,8 +322,8 @@ class ET_PatchRest(ET_Constructor):
     def __init__(self, auth_stub, endpoint, payload):
         auth_stub.refresh_token()
 
-        headers = {'content-type': 'application/json'}
-        r = requests.patch(endpoint + '?access_token=' + auth_stub.authToken, data=json.dumps(payload), headers=headers)
+        headers = {'content-type' : 'application/json', 'user-agent' : 'FuelSDK-Python'}
+        r = requests.patch(endpoint + '?access_token=' + auth_stub.authToken , data=json.dumps(payload), headers=headers)
 
         obj = super(ET_PatchRest, self).__init__(r, True)
         return obj
